@@ -1,0 +1,12 @@
+{{ define "main-content" }}
+  {{/* range sort .Paginator.Pages ".Params.aip" "ASC" */}}
+
+  {{ range .Pages.ByParam "aip" }}
+    {{ partial "aip-list-item" . }}
+  {{ end }}
+
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "taxonomy" . }}
+{{ end }}

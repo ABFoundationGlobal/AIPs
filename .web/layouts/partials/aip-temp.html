@@ -1,0 +1,18 @@
+{{ $hasPublicCall := false }}
+{{ range .Site.Pages }}
+  {{ if in .Params.Status "Public Call" }}
+    {{ $hasPublicCall = true }}
+  {{ end }}
+{{ end }}
+
+<h3>Current Public Calls</h3>
+
+{{ if $hasPublicCall }}
+  {{ range .Site.Pages }}
+    {{ if in .Params.Status "Public Call" }}
+      {{ partial "aip-list-item" . }}
+    {{ end }}
+  {{ end }}
+{{ else }}
+  No AIP is Currently for Public Call
+{{ end }}

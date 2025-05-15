@@ -1,0 +1,5 @@
+<article class="aip-list-item">
+  <span class="aip-no"><a href="{{ .RelPermalink }}">AIP-{{ .Params.aip }}</a></span> <span class="aip-status {{ lower .Params.status }}">{{ .Params.status }}</span>
+  <h4><a href="{{ .RelPermalink }}">{{ .Page.Title }}</a></h4>
+  <span class="authors"><i class="nf nf-fa-user_o"></i> {{ .Params.authors | markdownify | safeHTML }}</span>
+</article>

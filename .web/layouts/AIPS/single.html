@@ -1,0 +1,48 @@
+{{ define "main-content" }}
+
+  <article class="markdown">
+    <h1>AIP-{{ .Params.aip }}: {{ .Title }}</h1>
+    <table class="aip-table">
+      {{ if .Params.aip }}
+        <tr><th>AIP</th><td>{{ .Params.AIP }}</td></tr>
+      {{ end }}
+      {{ if .Params.title }}
+        <tr><th>Title</th><td>{{ .Params.title }}</td></tr>
+      {{ end }}
+      {{ if .Params.authors }}
+        <tr><th>Author(s)</th><td>{{ .Params.authors | markdownify }}</td></tr>
+      {{ end }}
+      {{ if .Params.Discussions }}
+        <tr><th>Discussions To</th><td>{{ .Params.Discussions | markdownify }}</td></tr>
+      {{ end }}
+      {{ if .Params.categories }}
+        <tr><th>Category</th><td>{{ .Params.categories }}</td></tr>
+      {{ end }}
+      {{ if .Params.types }}
+        <tr><th>Type</th><td>{{ .Params.types }}</td></tr>
+      {{ end }}
+      {{ if .Params.status }}
+        <tr><th>Status</th><td><span class="aip-status {{ lower .Params.status }}">{{ .Params.status }}</span></td></tr>
+      {{ end }}
+      {{ if .Params.SupersededBy }}
+        <tr><th>Superseded By</th><td><a href="../aip-{{ .Params.SupersededBy }}">AIP-{{ .Params.SupersededBy }}</a></td></tr>
+      {{ end }}
+      {{ if .Params.Superseding }}
+        <tr><th>Superseding</th><td><a href="../aip-{{ .Params.Superseding }}">AIP-{{ .Params.Superseding }}</a></td></tr>
+      {{ end }}
+      <tr><th>Created</th><td>{{ .Params.created }}</td></tr>
+      {{ if .Params.updated }}
+        <tr><th>Updated</th><td>{{ .Params.updated }}</td></tr>
+      {{ end }}
+    </table>
+    {{- .Content -}}
+  </article>
+{{ end }}
+
+{{ define "toc" }}
+  {{ partial "toc" . }}
+{{ end }}
+
+{{ define "git-info" }}
+  {{ partial "aip-git-info" . }}
+{{ end }}
