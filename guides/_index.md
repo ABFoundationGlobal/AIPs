@@ -41,4 +41,4 @@ More details covered in:
 
 ## About This Guideline
 
-This document was derived heavily from [Ethereum's EIP-1](https://github.com/ethereum/EIPs) which was derived [Bitcoin's BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki which in turn was derived from [Python's PEP-0001](https://www.python.org/dev/peps/) In many places text was simply copied and modified. The authors in the documents mentioned above are not responsible for its use in the AB Improvement Proposal, and should not be bothered with questions specific to Newton or the AIP. Please direct all comments to the AIP editors.
+This document was derived heavily from [Ethereum's EIP-1](https://github.com/ethereum/EIPs) which was derived [Bitcoin's BIP-0001](https://github.com/bitcoin/bips) written by Amir Taaki which in turn was derived from [Python's PEP-0001](https://www.python.org/dev/peps/) In many places text was simply copied and modified. The authors in the documents mentioned above are not responsible for its use in the AB Improvement Proposal, and should not be bothered with questions specific to AB or the AIP. Please direct all comments to the AIP editors.
