@@ -1,5 +1,5 @@
 baseURL: https://aips.ab.org/
-title: AB Improvement Proposals (NEPs)
+title: AB Improvement Proposals (AIPs)
 theme: newdocs
 
 ##########
@@ -42,7 +42,7 @@ languages:
   en:
     languageName: English
     contentDir: contents
-    title: AB Improvement Proposals (NEPs)
+    title: AB Improvement Proposals (AIPs)
     weight: 1
     languagedirection: ltr
 

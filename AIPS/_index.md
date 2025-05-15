@@ -1,7 +1,7 @@
 ---
-title: NEPs
+title: AIPs
 menu:
   main:
-    name: All NEPs
+    name: All AIPs
     weight: 1
 ---

@@ -1,24 +1,24 @@
-# AB Improvement Proposals (NEPs)
+# AB Improvement Proposals (AIPs)
 
-[![Join the chat at https://gitter.im/ABFoundationGlobal/NEPs](https://badges.gitter.im/ABFoundationGlobal/NEPs.svg)](https://gitter.im/ABFoundationGlobal/NEPs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![Deploy Status](https://img.shields.io/github/workflow/status/ABFoundationGlobal/NEPs/Deploy%20Github%20Pages/main)
+[![Join the chat at https://gitter.im/ABFoundationGlobal/AIPs](https://badges.gitter.im/ABFoundationGlobal/AIPs.svg)](https://gitter.im/ABFoundationGlobal/AIPs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![Deploy Status](https://img.shields.io/github/workflow/status/ABFoundationGlobal/AIPs/Deploy%20Github%20Pages/main)
 
-AB Improvement Proposals (NEPs) describe Proposals for the AB including _Economic Model_, _Personnel_, _Technical_, _Community Governance_ and _Business_.
+AB Improvement Proposals (AIPs) describe Proposals for the AB including _Economic Model_, _Personnel_, _Technical_, _Community Governance_ and _Business_.
 
 We welcome anyone with suggestions related to AB to compile a AIP.
 
-This repository tracks the ongoing status of NEPs.
+This repository tracks the ongoing status of AIPs.
 
-- [NEPs Website](https://aips.ab.org/) is built from NEPs and Docs from this repository.
+- [AIPs Website](https://aips.ab.org/) is built from AIPs and Docs from this repository.
 
-- [All NEPs](https://aips.ab.org/aips/) displays all NEPs merged into this repository, source files are located under `AIPS` directory.
+- [All AIPs](https://aips.ab.org/aips/) displays all AIPs merged into this repository, source files are located under `AIPS` directory.
 
-- [AIP Process](https://aips.ab.org/guides/aip-process/) that governs the NEPs repository.
+- [AIP Process](https://aips.ab.org/guides/aip-process/) that governs the AIPs repository.
 
-## Contributing to NEPs
+## Contributing to AIPs
 
-AB Improvement Proposals (NEPs) repository exists as a place to share concrete proposals with potential users of the proposal and the Newton community at large.
+AB Improvement Proposals (AIPs) repository exists as a place to share concrete proposals with potential users of the proposal and the Newton community at large.
 
-Visit [AIP Guidelines](https://aips.ab.org/guides/) to learn how to contribute to NEPs.
+Visit [AIP Guidelines](https://aips.ab.org/guides/) to learn how to contribute to AIPs.
 
 Docs for Guides are located in `./guides` directory in this repository.
 
@@ -86,7 +86,7 @@ yarn ff
 
 ## License
 
-- The NEPs and Docs  in this repostitory are licensed under the [CC0 1.0 Universal (CC0 1.0)
+- The AIPs and Docs  in this repostitory are licensed under the [CC0 1.0 Universal (CC0 1.0)
 Public Domain Dedication](https://creativecommons.org/publicdomain/zero/1.0/).
 
 - The underlying program used to build the website is licensed under the [Apache License 2.0](http://www.apache.org/licenses/LICENSE-2.0).
