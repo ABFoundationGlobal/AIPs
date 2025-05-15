@@ -44,10 +44,10 @@ Learn how AIP is processed from a Draft to Final Version
   {{< /columns >}}
 
 {{< columns >}}
-  
-  <--->
-  
-  {{< /columns >}}
+
+<--->
+
+{{< /columns >}}
 
 </div>
 </center>

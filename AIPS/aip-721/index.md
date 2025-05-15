@@ -20,7 +20,7 @@ We considered use cases of NFTs being owned and transacted by individuals as wel
 
 - Physical property — houses, unique artwork
 - Virtual collectables — unique pictures of kittens, collectable cards
-- “Negative value” assets — loans, burdens and other responsibilities  
+- “Negative value” assets — loans, burdens and other responsibilities
 
 In general, all houses are distinct and no two kittens are alike. NFTs are distinguishable and you must track the ownership of each one separately.
 
@@ -150,6 +150,7 @@ interface ERC165 {
 ```
 
 A wallet/broker/auction application MUST implement the wallet interface if it will accept safe transfers.
+
 ```solidity
 /// @dev Note: the ERC-165 identifier for this interface is 0x150b7a02.
 interface ARC721TokenReceiver {
@@ -168,7 +169,9 @@ interface ARC721TokenReceiver {
     function onERC721Received(address _operator, address _from, uint256 _tokenId, bytes _data) external returns(bytes4);
 }
 ```
+
 The metadata extension is OPTIONAL for ARC-721 smart contracts (see “caveats”, below). This allows your smart contract to be interrogated for its name and for details about the assets which your NFTs represent.
+
 ```solidity
 /// @title ARC-721 Non-Fungible Token Standard, optional metadata extension
 ///  Note: the ERC-165 identifier for this interface is 0x5b5e139f.
@@ -186,7 +189,9 @@ interface NRC721Metadata /* is ARC-721 */ {
     function tokenURI(uint256 _tokenId) external view returns (string);
 }
 ```
+
 This is the "ARC-721 Metadata JSON Schema" referenced above.
+
 ```
 {
     "title": "Asset Metadata",
@@ -207,7 +212,9 @@ This is the "ARC-721 Metadata JSON Schema" referenced above.
     }
 }
 ```
+
 The enumeration extension is OPTIONAL for ARC-721 smart contracts (see “caveats”, below). This allows your contract to publish its full list of NFTs and make them discoverable.
+
 ```solidity
 /// @title ARC-721 Non-Fungible Token Standard, optional enumeration extension
 ///  Note: the ERC-165 identifier for this interface is 0x780e9d63.
@@ -234,28 +241,36 @@ interface ARC721Enumerable /* is ARC-721 */ {
     function tokenOfOwnerByIndex(address _owner, uint256 _index) external view returns (uint256);
 }
 ```
+
 ### Caveats
+
 The 0.4.20 Solidity interface grammar is not expressive enough to document the ARC-721 standard. A contract which complies with ARC-721 MUST also abide by the following:
+
 - Solidity issue #3412: The above interfaces include explicit mutability guarantees for each function. Mutability guarantees are, in order weak to strong: payable, implicit nonpayable, view, and pure. Your implementation MUST meet the mutability guarantee in this interface and you MAY meet a stronger guarantee. For example, a payable function in this interface may be implemented as nonpayble (no state mutability specified) in your contract. We expect a later Solidity release will allow your stricter contract to inherit from this interface, but a workaround for version 0.4.20 is that you can edit this interface to add stricter mutability before inheriting from your contract.
 - Solidity issue #3419: A contract that implements ARC7Metadata or ARC721Enumerable SHALL also implement ARC-721. ARC-721 implements the requirements of interface ERC-165.
 - Solidity issue #2330: If a function is shown in this specification as external then a contract will be compliant if it uses public visibility. As a workaround for version 0.4.20, you can edit this interface to switch to public before inheriting from your contract.
-- Solidity issues #3494, #3544: Use of this.*.selector is marked as a warning by Solidity, a future version of Solidity will not mark this as an error.
+- Solidity issues #3494, #3544: Use of this.\*.selector is marked as a warning by Solidity, a future version of Solidity will not mark this as an error.
 
 ### Rationale
+
 There are many proposed uses of Ethereum smart contracts that depend on tracking distinguishable assets. Examples of existing or planned NFTs are LAND in Decentraland, the eponymous punks in CryptoPunks, and in-game items using systems like DMarket or EnjinCoin. Future uses include tracking real-world assets, like real-estate (as envisioned by companies like Ubitquity or Propy). It is critical in each of these cases that these items are not “lumped together” as numbers in a ledger, but instead each asset must have its ownership individually and atomically tracked. Regardless of the nature of these assets, the ecosystem will be stronger if we have a standardized interface that allows for cross-functional asset management and sales platforms.
 
 ### “NFT” Word Choice
+
 “NFT” was satisfactory to nearly everyone surveyed and is widely applicable to a broad universe of distinguishable digital assets. We recognize that “deed” is very descriptive for certain applications of this standard (notably, physical property).
 
 Alternatives considered: distinguishable asset, title, token, asset, equity, ticket
 
 ### NFT Identifiers
+
 Every NFT is identified by a unique uint256 ID inside the ARC-721 smart contract. This identifying number SHALL NOT change for the life of the contract. The pair (contract address, uint256 tokenId) will then be a globally unique and fully-qualified identifier for a specific asset on an Ethereum chain. While some ARC-721 smart contracts may find it convenient to start with ID 0 and simply increment by one for each new NFT, callers SHALL NOT assume that ID numbers have any specific pattern to them, and MUST treat the ID as a “black box”. Also note that a NFTs MAY become invalid (be destroyed). Please see the enumerations functions for a supported enumeration interface.
 
 The choice of uint256 allows a wide variety of applications because UUIDs and sha3 hashes are directly convertible to uint256.
 
 ### Transfer Mechanism
+
 ARC-721 standardizes a safe transfer function safeTransferFrom (overloaded with and without a bytes parameter) and an unsafe function transferFrom. Transfers may be initiated by:
+
 - The owner of an NFT
 - The approved address of an NFT
 - An authorized operator of the current owner of an NFT
@@ -263,10 +278,11 @@ ARC-721 standardizes a safe transfer function safeTransferFrom (overloaded with 
 Additionally, an authorized operator may set the approved address for an NFT. This provides a powerful set of tools for wallet, broker and auction applications to quickly use a large number of NFTs.
 
 The transfer and accept functions’ documentation only specify conditions when the transaction MUST throw. Your implementation MAY also throw in other situations. This allows implementations to achieve interesting results:
+
 - Disallow transfers if the contract is paused — prior art, CryptoKitties deployed contract, line 611
 - Blacklist certain address from receiving NFTs — prior art, CryptoKitties deployed contract, lines 565, 566
-- Disallow unsafe transfers — transferFrom throws unless _to equals msg.sender or countOf(_to) is non-zero or was non-zero previously (because such cases are safe)
-- Charge a fee to both parties of a transaction — require payment when calling approve with a non-zero _approved if it was previously the zero address, refund payment if calling approve with the zero address if it was previously a non-zero address, require payment when calling any transfer function, require transfer parameter _to to equal msg.sender, require transfer parameter _to to be the approved address for the NFT
+- Disallow unsafe transfers — transferFrom throws unless \_to equals msg.sender or countOf(\_to) is non-zero or was non-zero previously (because such cases are safe)
+- Charge a fee to both parties of a transaction — require payment when calling approve with a non-zero \_approved if it was previously the zero address, refund payment if calling approve with the zero address if it was previously a non-zero address, require payment when calling any transfer function, require transfer parameter \_to to equal msg.sender, require transfer parameter \_to to be the approved address for the NFT
 - Read only NFT registry — always throw from unsafeTransfer, transferFrom, approve and setApprovalForAll
 
 Failed transactions will throw, a best practice identified in ERC-223, ERC-677, ERC-827 and OpenZeppelin’s implementation of SafeERC20.sol. ERC-20 defined an allowance feature, this caused a problem when called and then later modified to a different amount, as on OpenZeppelin issue #438. In ARC-721, there is no allowance because every NFT is unique, the quantity is none or one. Therefore we receive the benefits of ERC-20’s original design without problems that have been later discovered.
@@ -282,8 +298,6 @@ Alternatives considered: only allow two-step NERC-6 style transaction, require t
 We chose Standard Interface Detection (ERC-165) to expose the interfaces that a ARC-721 smart contract supports.
 
 A future EIP may create a global registry of interfaces for contracts. We strongly support such an EIP and it would allow your ARC-721 implementation to implement ARC721Enumerable, ARC7Metadata, or other interfaces by delegating to a separate contract.
-
-
 
 ## Test Cases
 
