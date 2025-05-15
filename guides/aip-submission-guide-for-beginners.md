@@ -142,7 +142,7 @@ A AIP Draft must be already in Newton AIPs repository before requesting for it t
 
 - AIP Editors should change the AIP status to Public Call.
 
-- The Public Call of a AIP should be prominently listed on Newton Project's official website.
+- The Public Call of a AIP should be prominently listed on AB's official website.
 
 - Any change request to the AIP document during the Public Review will result the AIP status revert to Draft.
 

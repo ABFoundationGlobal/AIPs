@@ -1,7 +1,7 @@
 ---
 title: Home
 type: home
-description: Newton Evolution Proposals (AIPs) describe Proposals for the Newton Project including Economic Model, Personnel, Technical, Community Governance and Business.
+description: AB Improvement Proposals (AIPs) describe Proposals for the AB including Economic Model, Personnel, Technical, Community Governance and Business.
 ---
 
 {{< aip-home-stats >}}
@@ -15,7 +15,7 @@ description: Newton Evolution Proposals (AIPs) describe Proposals for the Newton
 
 ## Get Involved To AIP
 
-We welcome anyone with suggestions related to Newton Project to compile a AIP.
+We welcome anyone with suggestions related to AB to compile a AIP.
 
 {{< columns >}}
 
@@ -44,28 +44,8 @@ Learn how AIP is processed from a Draft to Final Version
   {{< /columns >}}
 
 {{< columns >}}
-
-  <div class="home-card">
-
-### AIP Reviews
-
-See current AIP reviews and past results
-
-    {{< button relref="reviews/_index.md" >}}View{{< /button >}}
-
-  </div>
   
   <--->
-  
-  <div class="home-card">
-  
-  ### AIP Editors
-  
-  Contact a AIP Editor if you need help
-
-    {{< button relref="guides/aip-editors.md" >}}View{{< /button >}}
-
-  </div>
   
   {{< /columns >}}
 

@@ -15,7 +15,7 @@ This doc was originally from https://github.com/ABFoundationGlobal/AIPs/wiki and
 
 ## Start A AIP
 
-We welcome anyone with suggestions related to Newton Project to compile a AIP.
+We welcome anyone with suggestions related to AB to compile a AIP.
 
 Before you begin writing a formal AIP, you should vet your idea. Ask the Newton community first if an idea is original to avoid wasting time on something that will be be rejected based on prior research.
 

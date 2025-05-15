@@ -1,6 +1,6 @@
 ---
 title: AIP Status
-description: Standard AIP Status for Newton Evolution Proposals.
+description: Standard AIP Status for AB Improvement Proposals.
 weight: 41
 ---
 
@@ -10,7 +10,7 @@ This doc was originally from https://github.com/ABFoundationGlobal/AIPs/wiki and
 
 ## I. Available AIP Statuses
 
-Statuses listed below is the Standard AIP Status for Newton Evolution Proposals.
+Statuses listed below is the Standard AIP Status for AB Improvement Proposals.
 
 ### Regular Statuses
 
@@ -64,7 +64,7 @@ Each status change is requested by the AIP author and reviewed by the AIP editor
 
 ### 3. Public Call
 
-**Public Call**: This AIP will listed prominently on the https://newtonproject.org/aip website.
+**Public Call**: This AIP will listed prominently on the https://aips.ab.org website.
 
 #### `Public Call` -> `Active` / `Final`
 

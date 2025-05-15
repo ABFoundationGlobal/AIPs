@@ -1,24 +1,24 @@
-# Newton Evolution Proposals (NEPs)
+# AB Improvement Proposals (NEPs)
 
 [![Join the chat at https://gitter.im/ABFoundationGlobal/NEPs](https://badges.gitter.im/ABFoundationGlobal/NEPs.svg)](https://gitter.im/ABFoundationGlobal/NEPs?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge) ![Deploy Status](https://img.shields.io/github/workflow/status/ABFoundationGlobal/NEPs/Deploy%20Github%20Pages/main)
 
-Newton Evolution Proposals (NEPs) describe Proposals for the Newton Project including _Economic Model_, _Personnel_, _Technical_, _Community Governance_ and _Business_.
+AB Improvement Proposals (NEPs) describe Proposals for the AB including _Economic Model_, _Personnel_, _Technical_, _Community Governance_ and _Business_.
 
-We welcome anyone with suggestions related to Newton Project to compile a NEP.
+We welcome anyone with suggestions related to AB to compile a AIP.
 
 This repository tracks the ongoing status of NEPs.
 
-- [NEPs Website](https://neps.newtonproject.org/) is built from NEPs and Docs from this repository.
+- [NEPs Website](https://aips.ab.org/) is built from NEPs and Docs from this repository.
 
-- [All NEPs](https://neps.newtonproject.org/neps/) displays all NEPs merged into this repository, source files are located under `NEPS` directory.
+- [All NEPs](https://aips.ab.org/aips/) displays all NEPs merged into this repository, source files are located under `AIPS` directory.
 
-- [NEP Process](https://neps.newtonproject.org/guides/aip-process/) that governs the NEPs repository.
+- [AIP Process](https://aips.ab.org/guides/aip-process/) that governs the NEPs repository.
 
 ## Contributing to NEPs
 
-Newton Evolution Proposals (NEPs) repository exists as a place to share concrete proposals with potential users of the proposal and the Newton community at large.
+AB Improvement Proposals (NEPs) repository exists as a place to share concrete proposals with potential users of the proposal and the Newton community at large.
 
-Visit [NEP Guidelines](https://neps.newtonproject.org/guides/) to learn how to contribute to NEPs.
+Visit [AIP Guidelines](https://aips.ab.org/guides/) to learn how to contribute to NEPs.
 
 Docs for Guides are located in `./guides` directory in this repository.
 

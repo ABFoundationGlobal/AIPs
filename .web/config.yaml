@@ -1,5 +1,5 @@
-baseURL: https://neps.newtonproject.org/
-title: Newton Evolution Proposals (NEPs)
+baseURL: https://aips.ab.org/
+title: AB Improvement Proposals (NEPs)
 theme: newdocs
 
 ##########
@@ -42,13 +42,13 @@ languages:
   en:
     languageName: English
     contentDir: contents
-    title: Newton Evolution Proposals (NEPs)
+    title: AB Improvement Proposals (NEPs)
     weight: 1
     languagedirection: ltr
 
 ignoreFiles:
   - contents*/menu
-  - contents*/NEPS/nep-template*
+  - contents*/AIPS/aip-template*
 
 taxonomies:
   status: status
@@ -97,16 +97,12 @@ params:
   # This theme uses icons by https://fontawesome.com
   social:
     - title: Github
-      url: "https://github.com/newtonproject"
+      url: "https://github.com/ABFoundationGlobal"
       icon: nf-oct-mark_github
       icon_pack: nf
     - title: Twitter
-      url: "https://twitter.com/newton_project"
+      url: "https://x.com/ABDAO_Global"
       icon: nf-fa-twitter
-      icon_pack: nf
-    - title: Facebook
-      url: "https://www.facebook.com/newtonproject"
-      icon: nf-fa-facebook_square
       icon_pack: nf
     - title: Telegram
       url: "https://t.me/newtonproject"
