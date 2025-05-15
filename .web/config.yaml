@@ -6,7 +6,7 @@ theme: newdocs
 # NewDocs configuration
 # ------
 disablePathToLower: fales
-enableGitInfo: false
+enableGitInfo: true
 
 ##########
 # Needed for mermaid/katex shortcodes
