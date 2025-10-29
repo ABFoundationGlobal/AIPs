@@ -16,9 +16,9 @@ A standard interface for encrypted variable tokens.
 
 EVT(Encrypted Variable Token) is the replacement of NFT in metaverse and physical world.
 
-The key features of EVT are variableness, encryption, traceability. 
+The key features of EVT are variableness, encryption, traceability.
 
-The following standard allows for the implementation of a standard API for EVTs within smart contracts. This standard provides basic functionality to track, transfer, dynamic properties, encryption. 
+The following standard allows for the implementation of a standard API for EVTs within smart contracts. This standard provides basic functionality to track, transfer, dynamic properties, encryption.
 
 We considered the use cases of EVTs including vitality assets, privacy based assets, digital identities. We also considered a diverse universe of assets, and we know you will dream up many more:
 
@@ -57,7 +57,7 @@ interface EVTVariable {
 
     /// @dev Set the `propertyValue` by `tokenId` and `propertyName`.
     /// @param tokenId
-    /// @param propertyName name of property 
+    /// @param propertyName name of property
     /// @param propertyValue value of property
     function setDynamicProperty(
         uint256 tokenId,
@@ -77,7 +77,7 @@ interface EVTVariable {
 
     /// @dev Returns the `propertyValue` of the tokenId's `propertyName`.
     /// @param tokenId
-    /// @param propertyName name of property 
+    /// @param propertyName name of property
     function getDynamicPropertyValue(
         uint256 tokenId,
         string memory propertyName
@@ -94,7 +94,7 @@ interface EVTVariable {
     function getAllSupportProperties() external view returns (string[] memory);
 
     /// @dev Returns whether the `propertyName` exists.
-    /// @param propertyName name of property 
+    /// @param propertyName name of property
     function supportsProperty(string memory propertyName)
         external
         view
