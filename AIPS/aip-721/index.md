@@ -175,7 +175,7 @@ The metadata extension is OPTIONAL for ARC-721 smart contracts (see â€œcaveatsâ€
 ```solidity
 /// @title ARC-721 Non-Fungible Token Standard, optional metadata extension
 ///  Note: the ERC-165 identifier for this interface is 0x5b5e139f.
-interface NRC721Metadata /* is ARC-721 */ {
+interface ARC721Metadata /* is ARC-721 */ {
     /// @notice A descriptive name for a collection of NFTs in this contract
     function name() external view returns (string _name);
 
