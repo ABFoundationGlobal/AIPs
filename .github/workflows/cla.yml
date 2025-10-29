@@ -3,7 +3,11 @@ on:
   issue_comment:
     types: [created]
   pull_request_target:
-    types: [opened,closed,synchronize]
+    types: [opened, closed, synchronize]
+
+permissions:
+  contents: write
+  pull-requests: write
 
 jobs:
   CLABot:
@@ -11,14 +15,12 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: "CLA Signature Bot"
-        uses: MetaMask/cla-signature-bot@v3.0.1
+        uses: MetaMask/cla-signature-bot@v3.0.2
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           path-to-signatures: 'cla.json'
           url-to-cladocument: 'https://aips.ab.org/cla'
-          # This branch can't have protections, commits are made directly to the specified branch.
           branch: 'cla-signatures'
-          allowlist: ''
           allow-organization-members: false
           blockchain-storage-flag: false
