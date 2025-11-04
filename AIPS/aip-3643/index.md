@@ -4,7 +4,7 @@ Title: T-REX - Token for Regulated EXchanges
 Description: An institutional grade security token contract that provides interfaces for the management and compliant transfer of security tokens.
 Authors: Joachim Lebrun (@Joachim-Lebrun), Tony Malghem (@TonyMalghem), Kevin Thizy (@Nakasar), Luc Falempin (@lfalempin), Adam Boudjemaa (@Aboudjem)
 Discussions-to: https://ethereum-magicians.org/t/eip-3643-proposition-of-the-t-rex-token-standard-for-securities/6844
-Status: Final
+Status: Draft
 Categories: Technical
 Types: ARC
 Created: 2025-10-27
@@ -409,4 +409,4 @@ While the audits were primarily focused on the specific implementation by Tokeny
 
 ## Copyright
 
-Copyright and related rights waived via [CC0](../LICENSE.md).
+Copyright and related rights waived via [CC0](https://eips.ethereum.org/LICENSE).
